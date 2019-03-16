@@ -16,3 +16,11 @@ node {
         echo "deploying"
     }
 }
+stage('QA Approval'){
+        input "QC Pass?"        
+}
+node {
+    stage('up to production env'){
+        echo "Production pass"
+    }
+}
